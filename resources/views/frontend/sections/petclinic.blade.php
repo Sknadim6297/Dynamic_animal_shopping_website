@@ -24,6 +24,9 @@
     <!-- Page Breadcrumbs End -->
 
     <!-- Main Body Content Start -->
+    @php
+        $headerSettings = \App\Models\HeaderSettings::first();
+    @endphp
     <main id="body-content">
 
         <section class="wide-tb-100">
@@ -41,19 +44,13 @@
 
                         <p class="mb-4">We also have an upcoming Diagnostics &amp; Pathology Center coming up in our Facility for reliable State-of-the-art Diagnosis of our Furry Friends.</p>
 
-                        <a href="{{ route('clinic.booking') }}" class="btn-theme bg-navy-blue capusle mt-2">Book Doctor</a>
-
-                        <div class="row my-5">
-                            <div class="col-12 p-0 mb-3">
-                                <img class="img-fluid w-100" src="{{ asset('frontend/assets/images/about-1.jpg') }}" alt="Clinic">
-                            </div>
-                            <div class="col-6 p-0">
-                                <img class="img-fluid w-100" src="{{ asset('frontend/assets/images/about-2.jpg') }}" alt="">
-                            </div>
-                            <div class="col-6 p-0">
-                                <img class="img-fluid w-100" src="{{ asset('frontend/assets/images/about-3.jpg') }}" alt="">
-                            </div>
+                        {{-- Doctor image (kept) --}}
+                        @php $doctorImage = $headerSettings->doctor_image ?? 'frontend/assets/images/doctor.jpg'; @endphp
+                        <div class="mt-3 text-center">
+                            <img src="{{ asset($doctorImage) }}" alt="Doctor" class="img-fluid rounded" style="max-width: 180px; display: inline-block;" />
                         </div>
+
+                        {{-- removed static clinic images per request --}}
 
                     </div>
 
@@ -63,10 +60,9 @@
                                 <div class="services-list">
                                     <h4>Our Services</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="#">Pet Clinic <i class="icofont-check-circled"></i></a></li>
-                                        <li><a href="#">Pet Grooming <i class="icofont-check-circled"></i></a></li>
-                                        <li><a href="#">Adoptions <i class="icofont-check-circled"></i></a></li>
-                                        <li><a href="#">Pet Food <i class="icofont-check-circled"></i></a></li>
+                                        <li><a href="/pet-clinic">Pet Clinic <i class="icofont-check-circled"></i></a></li>
+                                        <li><a href="/grooming-booking">Pet Grooming <i class="icofont-check-circled"></i></a></li>
+                                        <li><a href="/pet-food">Pet Food <i class="icofont-check-circled"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -74,10 +70,10 @@
                             <div class="sidebar-secondary col-lg-12 col-md-6">
                                 <div class="sidebar-sitters">
                                     <h3>Contact & Booking</h3>
-                                    <p><i class="fa fa-map-marker-alt mr-2"></i><strong>CLINIC & GROOMING CENTER:</strong><br> BE-10, SECTOR - I, SALT LAKE, KOLKATA - 700 064</p>
-                                    <p><i class="fa fa-phone-alt mr-2"></i>7439767977</p>
-                                    <p><i class="fa fa-envelope mr-2"></i>info@animalpride.in</p>
-                                    <a href="{{ route('clinic.booking') }}" class="btn-theme bg-orange btn-shadow btn-block text-capitalize">Book Appointment</a>
+                                    <p><i class="fa fa-map-marker-alt mr-2"></i><strong>CLINIC & GROOMING CENTER:</strong><br>
+                                        {{ $headerSettings->address ?? 'BE-10, SECTOR - I, SALT LAKE, KOLKATA - 700 064' }}</p>
+                                    <p><i class="fa fa-phone-alt mr-2"></i>{{ $headerSettings->phone ?? '7439767977' }}</p>
+                                    <p><i class="fa fa-envelope mr-2"></i>{{ $headerSettings->email ?? 'info@animalpride.in' }}</p>
                                 </div>
                             </div>
                         </aside>

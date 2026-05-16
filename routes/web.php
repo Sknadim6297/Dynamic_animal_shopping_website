@@ -33,6 +33,7 @@ Route::get('/gallery/videos', [HomeController::class, 'videoGallery'])->name('ga
 Route::get('/video-gallery', [HomeController::class, 'videoGallery'])->name('video.gallery');
 Route::get('/grooming-booking', [HomeController::class, 'grooming'])->name('grooming');
 Route::get('/clinic-booking', [HomeController::class, 'clinicBooking'])->name('clinic.booking');
+// Note: use existing routes '/grooming-booking' and '/pet-clinic' instead of duplicate friendly routes
 Route::get('/groomer-details/{id}', [HomeController::class, 'groomerDetails'])->name('groomer.details');
 Route::post('/appointment', [App\Http\Controllers\AppointmentController::class, 'store'])->name('appointment.store');
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');

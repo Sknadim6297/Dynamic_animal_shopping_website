@@ -117,13 +117,15 @@
                     <h3 class="footer-heading">Our Photostream</h3>
                     <ul id="basicuse" class="photo-thumbs">
                         @php
-                            $galleryImages = \App\Models\Gallery::latest()->get();
+                            // Fetch recent galleries (scan a few recent records to gather images)
+                            $galleryImages = \App\Models\Gallery::latest()->take(20)->get();
                             $photoCount = 0;
+                            $photoLimit = 9; // show latest 9 images
                         @endphp
                         @forelse($galleryImages as $gallery)
                             @if($gallery->images && is_array($gallery->images))
                                 @foreach($gallery->images as $image)
-                                    @if($photoCount < 6)
+                                    @if($photoCount < $photoLimit)
                                         <li>
                                             <a href="{{ asset($image) }}" title="{{ $gallery->pet_name ?? 'Pet Gallery' }}" data-lightbox="gallery">
                                                 <img src="{{ asset($image) }}" alt="{{ $gallery->pet_name ?? 'Pet Gallery Image' }}" style="width: 100%; height: auto; display: block;" />

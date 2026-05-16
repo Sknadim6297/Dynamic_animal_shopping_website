@@ -358,16 +358,13 @@ Custom Javascript
         },
 
         // Flickr Photostream
+        // NOTE: Disabled automatic Flickr feed so server-rendered gallery images are preserved.
         flickr_feed: function () {
             if ($('#basicuse').length) {
-
-                $('#basicuse').jflickrfeed({
-                    limit: 6,
-                    qstrings: {
-                        id: '52617155@N08'
-                    },
-                    itemTemplate: '<li><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
-                });
+                // If the server has already rendered gallery items (li children), do nothing.
+                if ($('#basicuse').children().length === 0) {
+                    // If you want to enable an external feed as fallback, implement it here.
+                }
             }
         },
 
