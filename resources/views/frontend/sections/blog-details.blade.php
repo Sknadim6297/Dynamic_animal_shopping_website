@@ -1,0 +1,578 @@
+@extends('layouts.layout')
+@section('styles')
+
+@endsection
+
+@section('content')
+
+    <!-- Page Breadcrumbs Start -->
+    <section class="breadcrumbs-page-wrap">        
+        <div class="bg-navy-blue bg-fixed pos-rel breadcrumbs-page">
+            <img class="ptt-png" src="{{ asset('frontend/assets/images/Dot-Shape.png') }}" alt="png">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Recent News</li>
+                    </ol>
+                </nav>
+                <h1>Recent News</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Page Breadcrumbs End -->
+
+    <!-- Main Body Content Start -->
+    <main id="body-content">
+
+        <!-- Shopping Wide Start -->
+        <section class="wide-tb-100 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog-wrap-modern single-entry">
+                            <div class="img">
+                                <img src="{{ asset('frontend/assets/images/blog/blog_modern_large.jpg') }}" alt="">
+                            </div>
+                            <div class="content">
+                                
+                                <h3 class="title">
+                                    Fun Overload Is When A Girl Is Exhausted From Fun
+                                </h3>
+                                <div class="description">
+                                </div>    
+                                <div class="bottom-content">
+                                    <div class="thumb-author">
+                                        <img src="{{ asset('frontend/assets/images/testimonial_thumb_large_1.jpg') }}" alt="">
+                                        Mila Flowers
+                                    </div>
+                                    <div class="date">04 Mar - <a href="#">2 Comments</a></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="entry-text-gap">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden</p>
+
+                            <p>In the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+
+                            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 text-center">
+                                <img src="{{ asset('frontend/assets/images/blog/blog_single_1.jpg') }}" class="rounded" alt="">
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <img src="{{ asset('frontend/assets/images/blog/blog_single_2.jpg') }}" class="rounded" alt="">
+                            </div>
+                        </div>
+
+                        <div class="entry-text-gap">
+                            <h3 class="fw-7 txt-orange mb-3">Best for dog’s training</h3>
+                            <p>Quality sleep is important for the body to heal and repair itself. It is also at this time that most growth takes place. Good blood circulation and efficient energy metabolism are crucial during sleep for quality rest for a healthy life.</p>
+
+                            <p>One of my trusted choices is woofmat. This has got to be one of the greatest inventions when it comes to dog beds in the veterinary field.</p>
+
+                            <p>Now’s the time to assess the garden. Make a list of what needs to be divided or replaced, and take a few snapshots on your phone as a visual reminder. Note if a plant is too big or small for a particular spot, and when you see varieties that might work better together. Fall and spring are the best times to move plants around.</p>
+                        </div>
+
+                        <!-- Tags & Share Box -->
+                        <div class="row align-items-center">
+                            <div class="col-md-auto">
+                                <div class="tags">
+                                    <a href="#">Outstanding</a>
+                                    <a href="#">Lifestyle</a>
+                                    <a href="#">Travel</a>
+                                </div>
+                            </div>
+                            <div class="col-md-auto ms-auto">
+                                <div class="share-this">
+                                    <div class="d-inline-flex align-items-center">
+                                        Share it:
+                                        <a href="#" class="rounded-circle tw"><i class="icofont-twitter"></i></a>
+                                        <a href="#" class="rounded-circle ff"><i class="icofont-facebook"></i></a>
+                                        <a href="#" class="rounded-circle ln"><i class="icofont-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tags & Share Box -->
+
+                        <div class="author-box">
+                            <div class="media">
+                                <div class="thumb">
+                                    <img src="{{ asset('frontend/assets/images/testimonial_thumb_large_1.jpg') }}" alt="" class="rounded-circle">
+                                </div>
+                                <div class="service-inner-content media-body pos-rel">
+                                    <div class="social-icon-author">
+                                        <a href="#"><i class="icofont-twitter"></i></a>
+                                        <a href="#"><i class="icofont-facebook"></i></a>
+                                        <a href="#"><i class="icofont-instagram"></i></a>
+                                    </div>
+                                    <h5 class="fw-7 txt-white mb-3">About Mila Flowers</h5>
+                                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged. It was popularised in the sheets containing.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comments List -->
+                        <div class="commnets-reply">
+                            <h3 class="txt-orange fw-7 mb-3">Comments (02)</h3>
+                            <div class="media">
+                                <img class="thumb" src="{{ asset('frontend/assets/images/blog/comment_thumg_1.jpg') }}" alt="">
+                                <div class="media-body">
+                                    <div class="name">
+                                        <small>January 17, 2020</small>
+                                        <h5>Cindy Cambell</h5>
+                                        <a href="#" class="btn-theme bg-green btn-sm text-capitalize">Reply</a>
+                                    </div>
+                                    <p>3 years ago we wanted to go to see Michalengelos David in the Academy in Florence. The line was down the block</p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="media reply">
+                                <img class="thumb" src="{{ asset('frontend/assets/images/blog/comment_thumg_2.jpg') }}" alt="">
+                                <div class="media-body">
+                                    <div class="name">
+                                        <small>January 17, 2020</small>
+                                        <h5>Harry Olson</h5>
+                                        <a href="#" class="btn-theme bg-green btn-sm text-capitalize">Reply</a>
+                                    </div>
+                                    <p>3 years ago we wanted to go to see Michalengelos David in the Academy in Florence. The line was down the block</p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <img class="thumb" src="{{ asset('frontend/assets/images/blog/comment_thumg_1.jpg') }}" alt="">
+                                <div class="media-body">
+                                    <div class="name">
+                                        <small>January 17, 2020</small>
+                                        <h5>Cindy Cambell</h5>
+                                        <a href="#" class="btn-theme bg-green btn-sm text-capitalize">Reply</a>
+                                    </div>
+                                    <p>3 years ago we wanted to go to see Michalengelos David in the Academy in Florence. The line was down the block</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Comments List -->
+                        
+                        <!-- Reply Comment Form -->
+                        <div class="comment-reply-form">
+                            <h3 class="txt-white fw-7 mb-3">Leave a Comment</h3>
+                            <form action="#" method="post" novalidate="novalidate" class="rounded-field">
+                                <div class="form-row mb-4">
+                                    <div class="col">
+                                        <textarea rows="7" placeholder="Message" class="form-control form-light"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-4">
+                                    <div class="col">
+                                        <input type="text" name="name" class="form-control form-light" placeholder="Your Name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="email" class="form-control form-light" placeholder="Email">
+                                    </div>
+                                </div>                                
+                                <div class="form-row">
+                                    <button type="submit" class="btn-theme bg-navy-blue capusle mb-3">Post Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Reply Comment Form -->
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <aside class="row sidebar-widgets">
+                            <!-- Sidebar Primary Start -->
+                            <div class="sidebar-primary col-lg-12 col-md-6">
+                                <!-- Widget Wrap -->
+                                <div class="widget-wrap">
+                                    <form class="sidebar-search">
+                                        <input type="text" class="form-control form-light" placeholder="Enter here search...">
+                                        <button type="submit" class="btn-link"><i class="icofont-search"></i></button>
+                                    </form>
+                                </div>
+                                <!-- Widget Wrap -->
+
+                                <!-- Widget Wrap -->
+                                <div class="widget-wrap">
+                                    <h3 class="widget-title">Categories</h3>
+                                    
+                                    <div class="blog-list-categories">
+                                        <ul class="list-unstyled">                                        
+                                            <li><a href="#">Accesories <span class="count right">25</span></a></li>
+                                            <li><a href="#">Cats <span class="count right">3</span></a></li>
+                                            <li><a href="#">Dogs <span class="count right">7</span></a></li>
+                                            <li><a href="#">Lifestyle <span class="count right">6</span></a></li>
+                                            <li><a href="#">Nutrition <span class="count right">3</span></a></li>
+                                            <li><a href="#">Pet <span class="count right">3</span></a></li>
+                                            <li><a href="#">Toys <span class="count right">9</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Widget Wrap -->
+
+                                <!-- Widget Wrap -->
+                                <div class="widget-wrap">
+                                    <h3 class="widget-title">Popular Posts</h3>
+                                    
+                                    <div class="popular-post post-thumb">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <img src="{{ asset('frontend/assets/images/blog/post_thumb_1.jpg') }}" alt="">
+                                                <div>
+                                                    <a href="blog-single.html" class="title">Jamaican Wiener Dog Bobsled Team!</a>
+                                                    <small>July 22, 2020</small>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="{{ asset('frontend/assets/images/blog/post_thumb_2.jpg') }}" alt="">
+                                                <div>
+                                                    <a href="blog-single.html" class="title">A Message on COVID-19 From Pups</a>
+                                                    <small>July 22, 2020</small>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="{{ asset('frontend/assets/images/blog/post_thumb_3.jpg') }}" alt="">
+                                                <div>
+                                                    <a href="blog-single.html" class="title">We Found The Troll, & That Makes Us Happy!</a>
+                                                    <small>July 22, 2020</small>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Widget Wrap -->
+                            </div>
+                            <!-- Sidebar Primary End -->
+
+                            <!-- Sidebar Secondary Start -->
+                            <div class="sidebar-secondary col-lg-12 col-md-6">
+                                <!-- Widget Wrap -->
+                                <div class="sidebar-sitters">
+                                    <h3>Find a Pet Sitter</h3>
+
+                                    <div class="mb-3">
+                                        <select name="gender" class="form-control wide">
+                                            <option selected="" value="1">Choose Gender</option>
+                                            <option value="2">Male</option>
+                                            <option value="3">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <select name="age" class="form-control wide">
+                                            <option selected="" value="1">Choose Age</option>
+                                            <option value="2">Below 20</option>
+                                            <option value="3">Below 30</option>
+                                            <option value="4">Below 40</option>
+                                            <option value="5">Below 50</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <select class="form-control wide small-h" name="Country_Region">
+                                            <option>Choose Location</option>
+                                            <option value="Afganistan">Afghanistan</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="American Samoa">American Samoa</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Anguilla">Anguilla</option>
+                                            <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Aruba">Aruba</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bhutan">Bhutan</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Bonaire">Bonaire</option>
+                                            <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                                            <option value="Brunei">Brunei</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Burundi">Burundi</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Canary Islands">Canary Islands</option>
+                                            <option value="Cape Verde">Cape Verde</option>
+                                            <option value="Cayman Islands">Cayman Islands</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Channel Islands">Channel Islands</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Christmas Island">Christmas Island</option>
+                                            <option value="Cocos Island">Cocos Island</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo">Congo</option>
+                                            <option value="Cook Islands">Cook Islands</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cote DIvoire">Cote DIvoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Curaco">Curacao</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Djibouti">Djibouti</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="East Timor">East Timor</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Eritrea">Eritrea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Ethiopia">Ethiopia</option>
+                                            <option value="Falkland Islands">Falkland Islands</option>
+                                            <option value="Faroe Islands">Faroe Islands</option>
+                                            <option value="Fiji">Fiji</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="French Guiana">French Guiana</option>
+                                            <option value="French Polynesia">French Polynesia</option>
+                                            <option value="French Southern Ter">French Southern Ter</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Gambia">Gambia</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="Gibraltar">Gibraltar</option>
+                                            <option value="Great Britain">Great Britain</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Greenland">Greenland</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Guadeloupe">Guadeloupe</option>
+                                            <option value="Guam">Guam</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Hawaii">Hawaii</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="India">India</option>
+                                            <option value="Iran">Iran</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Isle of Man">Isle of Man</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kazakhstan">Kazakhstan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Kiribati">Kiribati</option>
+                                            <option value="Korea North">Korea North</option>
+                                            <option value="Korea Sout">Korea South</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                            <option value="Laos">Laos</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Lesotho">Lesotho</option>
+                                            <option value="Liberia">Liberia</option>
+                                            <option value="Libya">Libya</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macau">Macau</option>
+                                            <option value="Macedonia">Macedonia</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Malawi">Malawi</option>
+                                            <option value="Maldives">Maldives</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Malta">Malta</option>
+                                            <option value="Marshall Islands">Marshall Islands</option>
+                                            <option value="Martinique">Martinique</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mayotte">Mayotte</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Midway Islands">Midway Islands</option>
+                                            <option value="Moldova">Moldova</option>
+                                            <option value="Monaco">Monaco</option>
+                                            <option value="Mongolia">Mongolia</option>
+                                            <option value="Montserrat">Montserrat</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Nambia">Nambia</option>
+                                            <option value="Nauru">Nauru</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherland Antilles">Netherland Antilles</option>
+                                            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                                            <option value="Nevis">Nevis</option>
+                                            <option value="New Caledonia">New Caledonia</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Niue">Niue</option>
+                                            <option value="Norfolk Island">Norfolk Island</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Palau Island">Palau Island</option>
+                                            <option value="Palestine">Palestine</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Phillipines">Philippines</option>
+                                            <option value="Pitcairn Island">Pitcairn Island</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Republic of Montenegro">Republic of Montenegro</option>
+                                            <option value="Republic of Serbia">Republic of Serbia</option>
+                                            <option value="Reunion">Reunion</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russia">Russia</option>
+                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="St Barthelemy">St Barthelemy</option>
+                                            <option value="St Eustatius">St Eustatius</option>
+                                            <option value="St Helena">St Helena</option>
+                                            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                            <option value="St Lucia">St Lucia</option>
+                                            <option value="St Maarten">St Maarten</option>
+                                            <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                            <option value="Saipan">Saipan</option>
+                                            <option value="Samoa">Samoa</option>
+                                            <option value="Samoa American">Samoa American</option>
+                                            <option value="San Marino">San Marino</option>
+                                            <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Seychelles">Seychelles</option>
+                                            <option value="Sierra Leone">Sierra Leone</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="Solomon Islands">Solomon Islands</option>
+                                            <option value="Somalia">Somalia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sudan">Sudan</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Swaziland">Swaziland</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Syria">Syria</option>
+                                            <option value="Tahiti">Tahiti</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Tajikistan">Tajikistan</option>
+                                            <option value="Tanzania">Tanzania</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Tokelau">Tokelau</option>
+                                            <option value="Tonga">Tonga</option>
+                                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Turkmenistan">Turkmenistan</option>
+                                            <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                                            <option value="Tuvalu">Tuvalu</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Erimates">United Arab Emirates</option>
+                                            <option value="United States of America">United States of America</option>
+                                            <option value="Uraguay">Uruguay</option>
+                                            <option value="Uzbekistan">Uzbekistan</option>
+                                            <option value="Vanuatu">Vanuatu</option>
+                                            <option value="Vatican City State">Vatican City State</option>
+                                            <option value="Venezuela">Venezuela</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                            <option value="Wake Island">Wake Island</option>
+                                            <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Zaire">Zaire</option>
+                                            <option value="Zambia">Zambia</option>
+                                            <option value="Zimbabwe">Zimbabwe</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <select name="experience" class="form-control wide">
+                                            <option selected="" value="1">Choose Experience</option>
+                                            <option value="2">1 to 3 years</option>
+                                            <option value="3">3 to 7 years</option>
+                                            <option value="4">7 to 10 years</option>
+                                            <option value="5">More than 10 years</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <select name="role" class="form-control wide">
+                                            <option selected="" value="1">Choose Role</option>
+                                            <option value="2">option 1</option>
+                                            <option value="3">option 2</option>
+                                            <option value="4">option 3</option>
+                                            <option value="5">option 4</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="note">
+                                            All are certified & trained pet caretakers
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn-theme bg-orange btn-shadow btn-block text-capitalize">Find Pet Sitter</button>
+                                    <div class="text-right">
+                                        <img src="{{ asset('frontend/assets/images/sidebar_pet.png') }}" alt="" class="dog-sitting">
+                                    </div>
+                                </div>
+                                <!-- Widget Wrap -->
+                            </div>
+                            <!-- Sidebar Secondary End -->
+
+                            
+                        </aside>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Shopping Wide End -->
+
+    </main>
+
+@endsection
