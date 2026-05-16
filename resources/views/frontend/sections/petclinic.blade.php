@@ -74,6 +74,9 @@
                                         {{ $headerSettings->address ?? 'BE-10, SECTOR - I, SALT LAKE, KOLKATA - 700 064' }}</p>
                                     <p><i class="fa fa-phone-alt mr-2"></i>{{ $headerSettings->phone ?? '7439767977' }}</p>
                                     <p><i class="fa fa-envelope mr-2"></i>{{ $headerSettings->email ?? 'info@animalpride.in' }}</p>
+                                    <div class="mt-3">
+                                        <a href="{{ route('clinic.booking') }}" class="btn-theme bg-orange capusle mt-2 btn-shadow">Book Appointment</a>
+                                    </div>
                                 </div>
                             </div>
                         </aside>

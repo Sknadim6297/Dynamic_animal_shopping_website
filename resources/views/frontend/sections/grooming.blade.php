@@ -135,7 +135,7 @@
                         <span>Book Your Appointment</span>
                     </h1>
                     <p class="mb-0">Submit the booking request directly on this page. Groomer assignment is handled separately, and the package is optional.</p>
-                    <a href="#booking-form" class="btn-theme bg-orange capusle mt-4 btn-shadow">Book Now</a>
+                    <!-- booking button removed per request -->
                 </div>
             </div>
 
@@ -204,8 +204,8 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
+                                        <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}">
                                     </div>
 
                                     <div class="col-md-6">

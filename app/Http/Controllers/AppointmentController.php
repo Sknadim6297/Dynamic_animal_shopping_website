@@ -22,7 +22,7 @@ class AppointmentController extends Controller
             'pet_name' => 'required|string|max:255',
             'pet_type' => 'required|string|max:255',
             'owner_name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'email' => 'nullable|email|max:255',
             'phone' => 'required|string|max:255',
             'service_type' => 'required|in:grooming,clinic',
             'appointment_date' => 'required|date|after_or_equal:today',
@@ -36,25 +36,32 @@ class AppointmentController extends Controller
             $validated['price_package'] = null;
         }
 
+        // Ensure email key exists to avoid DB errors when column is non-nullable
+        if (!array_key_exists('email', $validated) || $validated['email'] === null) {
+            $validated['email'] = '';
+        }
+
         $appointment = Appointment::create($validated);
 
-        // Send confirmation email
+        // Send confirmation email only if an email was provided
         $emailSent = false;
-        try {
-            Mail::to($appointment->email)->send(new BookingConfirmation($appointment));
-            $emailSent = true;
-            Log::info('Booking confirmation email sent successfully to: ' . $appointment->email);
-        } catch (\Exception $e) {
-            // Log detailed error but don't fail the booking
-            Log::error('Failed to send booking confirmation email to: ' . $appointment->email);
-            Log::error('Error details: ' . $e->getMessage());
-            Log::error('Stack trace: ' . $e->getTraceAsString());
+        if (!empty($appointment->email)) {
+            try {
+                Mail::to($appointment->email)->send(new BookingConfirmation($appointment));
+                $emailSent = true;
+                Log::info('Booking confirmation email sent successfully to: ' . $appointment->email);
+            } catch (\Exception $e) {
+                // Log detailed error but don't fail the booking
+                Log::error('Failed to send booking confirmation email to: ' . $appointment->email);
+                Log::error('Error details: ' . $e->getMessage());
+                Log::error('Stack trace: ' . $e->getTraceAsString());
+            }
         }
 
         $successMessage = 'Your appointment has been booked successfully!';
         if ($emailSent) {
             $successMessage .= ' A confirmation email has been sent to ' . $appointment->email;
-        } else {
+        } elseif (!empty($appointment->email)) {
             $successMessage .= ' (Note: Email could not be sent. Please check your email configuration.)';
         }
 
