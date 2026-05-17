@@ -181,6 +181,31 @@
                             <button type="submit" class="waves-effect waves-light btn-large">Update Header Settings</button>
                         </div>
                     </div>
+                    
+                    <h5 style="margin-top: 30px; margin-bottom: 15px; color: #2196F3;">Breadcrumb Settings</h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label style="font-size: 14px; color: #666;">Breadcrumb Background Image</label>
+                            @if($headerSettings->breadcrumb_bg)
+                                <div style="margin-bottom: 15px;">
+                                    <p>Current Image:</p>
+                                    <img src="{{ asset($headerSettings->breadcrumb_bg) }}" alt="Current Breadcrumb Background" style="max-width: 300px; height: auto; border: 1px solid #ddd; padding: 5px;">
+                                </div>
+                            @endif
+                            <div class="file-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" name="breadcrumb_bg" id="breadcrumb_bg" accept="image/*">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload Breadcrumb Background (leave empty to keep current)">
+                                </div>
+                            </div>
+                            @error('breadcrumb_bg')
+                                <span class="red-text">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

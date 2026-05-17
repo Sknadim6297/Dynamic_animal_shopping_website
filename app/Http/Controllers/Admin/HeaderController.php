@@ -49,6 +49,7 @@ class HeaderController extends Controller
             'logo_dark' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'logo_white' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'logo_footer' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'breadcrumb_bg' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
         ]);
 
         $headerSettings = HeaderSettings::firstOrCreate([]);
@@ -102,6 +103,25 @@ class HeaderController extends Controller
             $validated['logo_footer'] = 'uploads/logos/' . $imageName;
         } else {
             unset($validated['logo_footer']);
+        }
+
+        // Handle breadcrumb background upload
+        if ($request->hasFile('breadcrumb_bg')) {
+            // Delete old image if exists
+            if ($headerSettings->breadcrumb_bg && File::exists(public_path($headerSettings->breadcrumb_bg))) {
+                File::delete(public_path($headerSettings->breadcrumb_bg));
+            }
+
+            $image = $request->file('breadcrumb_bg');
+            $imageName = 'breadcrumb_bg_' . time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            $uploadPathBg = public_path('uploads/breadcrumbs');
+            if (!File::exists($uploadPathBg)) {
+                File::makeDirectory($uploadPathBg, 0755, true);
+            }
+            $image->move($uploadPathBg, $imageName);
+            $validated['breadcrumb_bg'] = 'uploads/breadcrumbs/' . $imageName;
+        } else {
+            unset($validated['breadcrumb_bg']);
         }
 
         $headerSettings->update($validated);

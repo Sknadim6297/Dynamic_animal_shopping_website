@@ -14,6 +14,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::get('/migrate', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Migration completed successfully';
+});
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+    return 'Storage link created successfully';
+});
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');

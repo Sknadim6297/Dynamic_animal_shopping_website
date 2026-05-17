@@ -71,17 +71,13 @@
                     <h3 class="footer-heading">Explore</h3>
                     <div class="footer-widget-menu">
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('about') }}"><i class="icofont-simple-right"></i> <span>About
-                                        Us</span></a></li>
-                            <li><a href="{{ route('services') }}"><i class="icofont-simple-right"></i>
-                                    <span>Services</span></a></li>
-                            <li><a href="{{ route('grooming') }}"><i class="icofont-simple-right"></i> <span>Our
-                                        Team</span></a></li>
-                            <li><a href="{{ route('gallery') }}"><i class="icofont-simple-right"></i>
-                                    <span>Gallery</span></a></li>
-                            <li><a href="{{ route('blog') }}"><i class="icofont-simple-right"></i>
-                                    <span>Blog</span></a>
-                            </li>
+                            <li><a href="{{ route('home') }}"><i class="icofont-simple-right"></i> <span>Home</span></a></li>
+                            <li><a href="{{ route('about') }}"><i class="icofont-simple-right"></i> <span>About Us</span></a></li>
+                            <li><a href="{{ route('services') }}"><i class="icofont-simple-right"></i> <span>Our Services</span></a></li>
+                            <li><a href="{{ route('grooming') }}"><i class="icofont-simple-right"></i> <span>Pet Grooming</span></a></li>
+                            <li><a href="{{ route('petclinic') }}"><i class="icofont-simple-right"></i> <span>Pet Clinic</span></a></li>
+                            <li><a href="{{ route('gallery') }}"><i class="icofont-simple-right"></i> <span>Gallery</span></a></li>
+                            <li><a href="{{ route('contact') }}"><i class="icofont-simple-right"></i> <span>Contact Us</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,19 +89,14 @@
                     <h3 class="footer-heading">Useful links</h3>
                     <div class="footer-widget-menu">
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('grooming') }}"><i class="icofont-simple-right"></i> <span>Grooming
-                                        Booking</span></a></li>
-                            <li><a href="{{ route('contact') }}"><i class="icofont-simple-right"></i> <span>Contact
-                                        Us</span></a></li>
-                            <li><a href="{{ route('home') }}"><i class="icofont-simple-right"></i>
-                                    <span>Home</span></a></li>
+                            <li><a href="{{ route('grooming') }}"><i class="icofont-simple-right"></i> <span>Grooming Booking</span></a></li>
+                            <li><a href="{{ route('contact') }}"><i class="icofont-simple-right"></i> <span>Contact Us</span></a></li>
+                            <li><a href="{{ route('home') }}"><i class="icofont-simple-right"></i> <span>Home</span></a></li>
                             @if ($headerSettings && $headerSettings->facebook_url)
-                                <li><a href="{{ $headerSettings->facebook_url }}" target="_blank"><i
-                                            class="icofont-simple-right"></i> <span>Facebook</span></a></li>
+                                <li><a href="{{ $headerSettings->facebook_url }}" target="_blank"><i class="icofont-simple-right"></i> <span>Facebook</span></a></li>
                             @endif
                             @if ($headerSettings && $headerSettings->instagram_url)
-                                <li><a href="{{ $headerSettings->instagram_url }}" target="_blank"><i
-                                            class="icofont-simple-right"></i> <span>Instagram</span></a></li>
+                                <li><a href="{{ $headerSettings->instagram_url }}" target="_blank"><i class="icofont-simple-right"></i> <span>Instagram</span></a></li>
                             @endif
                         </ul>
                     </div>

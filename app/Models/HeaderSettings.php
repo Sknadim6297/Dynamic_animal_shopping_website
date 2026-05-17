@@ -25,5 +25,6 @@ class HeaderSettings extends Model
         'logo_dark',
         'logo_white',
         'logo_footer',
+        'breadcrumb_bg',
     ];
 }

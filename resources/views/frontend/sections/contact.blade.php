@@ -34,9 +34,7 @@
         <!-- Generally Asked Question Start -->
         <section class="wide-tb-100 pb-0">
             <div class="container">
-                <section class="map-wrap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"></iframe>
-                </section>
+        
             </div>
         </section>
         <!-- Generally Asked Question End -->
@@ -121,36 +119,36 @@
                     <!-- Icon Boxes Four Style -->
                     <div class="col-md-4 col-sm-6">
                         <div class="icon-box-4 h-100">
-                            <i data-feather="map-pin"></i>
-                            <h3>Visit Us</h3>
-                            <div>{{ $headerSettings->address ?? 'Pet Street 123 - New York' }}</div>
-                        </div>
+                                <i data-feather="map-pin"></i>
+                                <h3>Visit Us</h3>
+                                <div style="color:#fff;">{{ $headerSettings->address ?? 'Pet Street 123 - New York' }}</div>
+                            </div>
                     </div>
                     <!-- Icon Boxes Four Style -->
 
                     <!-- Icon Boxes Four Style -->
                     <div class="col-md-4 col-sm-6">
                         <div class="icon-box-4 h-100">
-                            <i data-feather="phone"></i>
-                            <h3>Phone Us</h3>
-                            <div>
-                                @forelse ($phoneNumbers as $phoneNumber)
-                                    <div><a href="tel:{{ preg_replace('/[^0-9+]/', '', $phoneNumber) }}">{{ trim($phoneNumber) }}</a></div>
-                                @empty
-                                    <div>(123) 456-789</div>
-                                @endforelse
+                                <i data-feather="phone"></i>
+                                <h3>Phone Us</h3>
+                                <div style="color:#fff;">
+                                    @forelse ($phoneNumbers as $phoneNumber)
+                                        <div><a href="tel:{{ preg_replace('/[^0-9+]/', '', $phoneNumber) }}" style="color:#fff !important;">{{ trim($phoneNumber) }}</a></div>
+                                    @empty
+                                        <div>(123) 456-789</div>
+                                    @endforelse
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <!-- Icon Boxes Four Style -->
 
                     <!-- Icon Boxes Four Style -->
                     <div class="col-md-4 col-sm-6 mx-auto">
                         <div class="icon-box-4 h-100">
-                            <i data-feather="mail"></i>
-                            <h3>Mail Us</h3>
-                            <div><a href="mailto:{{ $headerSettings->email ?? 'info@pethund.com' }}">{{ $headerSettings->email ?? 'info@pethund.com' }}</a></div>
-                        </div>
+                                <i data-feather="mail"></i>
+                                <h3>Mail Us</h3>
+                                <div style="color:#fff;"><a href="mailto:{{ $headerSettings->email ?? 'info@pethund.com' }}" style="color:#fff !important;">{{ $headerSettings->email ?? 'info@pethund.com' }}</a></div>
+                            </div>
                     </div>
                     <!-- Icon Boxes Four Style -->
                 </div>

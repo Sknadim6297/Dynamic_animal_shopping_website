@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+    @extends('layouts.layout')
 @section('styles')
 @endsection
 
@@ -62,7 +62,7 @@
                     @endforelse
                 </div>
 
-                <div class="text-center mt-4">
+                <div class="text-center mt-4 mb-4">
                     <a href="{{ route('gallery') }}" class="btn-theme bg-navy-blue btn-shadow">Back to Gallery</a>
                 </div>
             </div>

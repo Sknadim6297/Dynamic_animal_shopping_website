@@ -314,3 +314,12 @@
             }
         }
     </style>
+    <style>
+        /* Dynamic breadcrumb background (controlled via Admin Header Settings) */
+        @php $headerSettings = \App\Models\HeaderSettings::first(); @endphp
+        .breadcrumbs-page {
+            background-image: url('{{ asset($headerSettings->breadcrumb_bg ?? "frontend/assets/images/default-banner.jpg") }}');
+            background-repeat: no-repeat;
+            background-position: center center !important;
+        }
+    </style>
